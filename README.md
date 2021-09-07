@@ -23,6 +23,6 @@ Step 3.
  🖥️pc - you can restart or shut down pc all so you can open Task manager or cmd and you can viwe pc ip addres and take screen shot.
  🔗Link - open in browser some links from youtube and other.
 
-install al libraries:
+install all libraries:
 windows: pip install -r requirements.txt
 Macos and linux: pip3 install -r requirements.txt
