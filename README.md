@@ -8,7 +8,7 @@ Choose a name for your bot — your subscribers will see it in the conversation.
 Go to the @BotFather bot and send the command /token .
 
 Step 2*.
-           enter this token in code example: bot = bot = telebot.TeleBot('1828267547:AAESVt_qMBUtsxVGS7Ag3WTiKWVmqJUkMUY')
+           enter this token in code main.py example: bot = telebot.TeleBot('1828267547:AAESVt_qMBUtsxVGS7Ag3WTiKWVmqJUkMUY')
            
 Step 3.
            enter youtube video links that you like example: ranlist = ["https://www.youtube.com/watch?v=Zi_XLOBDo_Y", "https://www.youtube.com/watch?v=XAi3VTSdTxU"]
