@@ -1,4 +1,4 @@
-with this bot you can control pc use telegram bots.
+with this bot you can control pc use telegram bot
 
 Step 1*.
            Create telegram bot for this you need telegram on your pc.
