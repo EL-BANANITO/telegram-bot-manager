@@ -13,8 +13,8 @@ IP_Address = soc.gethostbyname(hostname)
 #bot token
 bot = telebot.TeleBot('Token')
 
-#video list list
-ranlist = ["any youtube video link"]#this is list and then bot do random chois of this videos
+#this is list and then bot do random chois of this videos
+ranlist = ["any youtube video link"]
 
 @bot.message_handler(commands=['start'])
 def start(message):
