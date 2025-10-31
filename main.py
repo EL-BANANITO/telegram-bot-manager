@@ -1,3 +1,13 @@
+# ============================================
+#  Project: Telegram bot to manage computer
+#  Author: Daviti Chikhladze
+#  Description: Telegram bot that has command that can do varius things to computer for more go to github.
+#  last Update: 10/31/2025
+# ||==================================================================||
+# ||----------------------  E L   B A N A N I T O  -------------------||
+# ||==================================================================||
+
+
 import telebot
 import random
 import webbrowser
@@ -6,15 +16,15 @@ import os
 import socket as soc
 import pyautogui
 
-#ip and pc hostname
+# Ip and pc hostname
 hostname = soc.gethostname()
 IP_Address = soc.gethostbyname(hostname)
 
-#bot token
+# Bot token
 bot = telebot.TeleBot('Token')
 
-#this is list and then bot do random chois of this videos
-ranlist = ["any youtube video link"]
+# This is list and then bot do random chois of this videos (command screamer)
+ranlist = ["links"]
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -24,7 +34,7 @@ def start(message):
     item1 = types.KeyboardButton("🎲 Random")
     item2 = types.KeyboardButton("🌐Browser")
     item3 = types.KeyboardButton("🖥️pc")
-    item4 = types.KeyboardButton("🔗video")
+    item4 = types.KeyboardButton("🔗Link")
 
     markup.add(item1, item2, item3, item4)
 
@@ -63,7 +73,7 @@ def text(message):
             bot.send_message(message.chat.id, "🖥️pc", reply_markup=markup)
         elif message.text == "🔗Link":
             markup = types.InlineKeyboardMarkup(row_width=2)
-            item1 = types.InlineKeyboardButton("screamer", callback_data='screamer')
+            item1 = types.InlineKeyboardButton("screamer", callback_data='screamer') # <-- this is ranlist
             item2 = types.InlineKeyboardButton("shreck", callback_data='shreck')
             item3 = types.InlineKeyboardButton("shreck-love", callback_data='shreck-love')
 
@@ -104,6 +114,7 @@ def callback_inline(call):
                 bot.send_message(call.message.chat.id, 'google close')
                 os.system("taskkill /f /im chrome.exe")
             elif call.data == 'screamer':
+                # Random video from list
                 bot.send_message(call.message.chat.id, 'video open')
                 webbrowser.open(random.choice(ranlist))
             elif call.data == 'cmd':
